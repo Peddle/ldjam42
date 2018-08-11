@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Player extends Component {
   constructor(props) {
     super(props);
-    this.state = props.position;
+    props.position;
   }
 
   render() {
@@ -20,8 +20,8 @@ class Player extends Component {
       width: "100px",
       height: "100px",
       borderRadius: "100%",
-      top: this.state.y,
-      left: this.state.x,
+      top: this.props.position.y - 50,
+      left: this.props.position.x - 50,
     };
   }
 }
